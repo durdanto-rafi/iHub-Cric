@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <item android:title="Compose" android:id="@+id/navigation_item_2" android:icon="@drawable/composea" ></item>
+            <item android:title="Matches"  android:icon="@drawable/inbox" ></item>
+            <item android:title="Now" android:icon="@drawable/senta"></item>
+            <item android:title="Statics" android:icon="@drawable/draft"></item>
+
+
+
+
+    <item android:title="Others">
+        <menu>
+            <item
+                android:title="Recent Results" android:icon="@drawable/spam"/>
+            <item
+                android:title="Records" android:icon="@drawable/bin"/>
+        </menu>
+    </item>
+
+    <group android:id="@+id/shitss">
+
+            <item android:title="Settings" android:icon="@drawable/settings"></item>
+            <item android:title="Help" android:icon="@drawable/help"></item>
+    </group>
+
+
+
+
+
+</menu>
