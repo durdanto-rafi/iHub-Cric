@@ -1,9 +1,11 @@
-package com.androidbelieve.drawerwithswipetabs;
+package com.intellehub.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.intellehub.sportshub.R;
 
 /**
  * Created by kundan on 10/26/2015.
