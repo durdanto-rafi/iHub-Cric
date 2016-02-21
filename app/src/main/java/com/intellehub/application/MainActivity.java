@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
     FragmentTransaction mFragmentTransaction;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -45,17 +46,17 @@ public class MainActivity extends AppCompatActivity {
 
         mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public boolean onNavigationItemSelected(MenuItem menuItem) {
+            public boolean onNavigationItemSelected(MenuItem menuItem)
+            {
                 mDrawerLayout.closeDrawers();
-
-
-                if (menuItem.getItemId() == R.id.nav_item_sent) {
+                if (menuItem.getItemId() == R.id.nav_item_sent)
+                {
                     FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.containerView, new SentFragment()).commit();
-
                 }
 
-                if (menuItem.getItemId() == R.id.nav_item_inbox) {
+                if (menuItem.getItemId() == R.id.nav_item_inbox)
+                {
                     FragmentTransaction xfragmentTransaction = mFragmentManager.beginTransaction();
                     xfragmentTransaction.replace(R.id.containerView, new TabFragment()).commit();
                 }
@@ -73,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
         ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.app_name, R.string.app_name);
 
         mDrawerLayout.setDrawerListener(mDrawerToggle);
-
         mDrawerToggle.syncState();
 
     }
