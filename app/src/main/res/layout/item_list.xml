@@ -18,7 +18,7 @@
 
 
         <ImageView
-            android:id="@+id/list_avatar"
+            android:id="@+id/ivNewsImage"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentLeft="true"
@@ -28,24 +28,24 @@
             android:src="@drawable/header" />
 
         <TextView
-            android:id="@+id/list_title"
+            android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@+id/list_avatar"
+            android:layout_toRightOf="@+id/ivNewsImage"
             android:text="Android "
             android:textAppearance="?attr/textAppearanceListItem"
             android:textColor="#000000"
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/list_desc"
+            android:id="@+id/tvDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/list_title"
+            android:layout_below="@+id/tvTitle"
             android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@+id/list_avatar"
+            android:layout_toRightOf="@+id/ivNewsImage"
             android:ellipsize="end"
             android:singleLine="true"
             android:text="Place to dive into android programming"
@@ -59,9 +59,9 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Bangladesh Cricket Board"
             android:id="@+id/textView"
-            android:layout_below="@+id/list_desc"
-            android:layout_alignLeft="@+id/list_desc"
-            android:layout_alignStart="@+id/list_desc"
+            android:layout_below="@+id/tvDescription"
+            android:layout_alignLeft="@+id/tvDescription"
+            android:layout_alignStart="@+id/tvDescription"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"

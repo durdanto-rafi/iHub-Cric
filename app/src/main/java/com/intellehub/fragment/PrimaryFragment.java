@@ -9,27 +9,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.intellehub.adapter.RecyclerAdapter;
+import com.intellehub.adapter.NewsAdapter;
 import com.intellehub.sportshub.R;
 
-/**
- * Created by Ratan on 7/29/2015.
- */
 public class PrimaryFragment extends Fragment {
-    RecyclerView recyclerView;
+    RecyclerView rvNews;
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 
-        View view = inflater.inflate(R.layout.primary_layout,null);
+        View view = inflater.inflate(R.layout.primary_layout, null);
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.my_recycler_view);
+        rvNews = (RecyclerView) view.findViewById(R.id.rvNews);
 
-        RecyclerAdapter adapter = new RecyclerAdapter(getActivity());
-        recyclerView.setAdapter(adapter);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        NewsAdapter adapter = new NewsAdapter(getActivity());
+        rvNews.setAdapter(adapter);
+        rvNews.setHasFixedSize(true);
+        rvNews.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         return view;
     }

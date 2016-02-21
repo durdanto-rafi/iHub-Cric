@@ -12,7 +12,7 @@ import com.intellehub.sportshub.R;
 /**
  * Created by kundan on 10/26/2015.
  */
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder>
+public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder>
 {
 
     String[] name = {"Androidwarriors", "Stackoverflow", "Developer Android", "AndroidHive",
@@ -20,26 +20,26 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder>
     Context context;
     LayoutInflater inflater;
 
-    public RecyclerAdapter(Context context)
+    public NewsAdapter(Context context)
     {
         this.context = context;
         inflater = LayoutInflater.from(context);
     }
 
     @Override
-    public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
+    public NewsViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {
         View v = inflater.inflate(R.layout.item_list, parent, false);
-        RecyclerViewHolder viewHolder = new RecyclerViewHolder(v);
+        NewsViewHolder viewHolder = new NewsViewHolder(v);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(RecyclerViewHolder holder, int position)
+    public void onBindViewHolder(NewsViewHolder holder, int position)
     {
-        holder.tv1.setText(name[position]);
-        holder.imageView.setOnClickListener(clickListener);
-        holder.imageView.setTag(holder);
+        holder.tvTitle.setText(name[position]);
+        holder.ivNewsImage.setOnClickListener(clickListener);
+        holder.ivNewsImage.setTag(holder);
     }
 
     View.OnClickListener clickListener = new View.OnClickListener()
@@ -47,7 +47,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder>
         @Override
         public void onClick(View v)
         {
-            RecyclerViewHolder vholder = (RecyclerViewHolder) v.getTag();
+            NewsViewHolder vholder = (NewsViewHolder) v.getTag();
             int position = vholder.getPosition();
             Toast.makeText(context, "This is position " + position, Toast.LENGTH_LONG).show();
         }
