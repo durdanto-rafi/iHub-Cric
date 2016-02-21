@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="F:\Project\ihub project\iHub-Cric\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="F:\Project\ihub project\iHub-Cric\app\build\intermediates\pre-dexed\debug\classes-f90bf971370019699aafc1921954179c169eef4b.jar" />
+    </item>
+    <item
+        jar="F:\Project\ihub project\iHub-Cric\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="F:\Project\ihub project\iHub-Cric\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-ce14b16ecdf27da2cf89968dc1acfae22ca72453.jar" />
+    </item>
+    <item
+        jar="F:\Project\ihub project\iHub-Cric\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="F:\Project\ihub project\iHub-Cric\app\build\intermediates\pre-dexed\debug\classes-acf1e95cb726d9b458573e4a01c6af55f253c7c4.jar" />
+    </item>
+    <item
+        jar="F:\Project\adt-bundle-windows-x86_64-20140702\adt-bundle-windows-x86_64-20140702\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="F:\Project\ihub project\iHub-Cric\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-8458d212d7122a4363f0057d7eba9bbcb508441c.jar" />
+    </item>
+    <item
+        jar="F:\Project\ihub project\iHub-Cric\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="F:\Project\ihub project\iHub-Cric\app\build\intermediates\pre-dexed\debug\classes-c4d992c96f6e9ca5787c8c29f1215b1552da14f2.jar" />
+    </item>
+    <item
+        jar="F:\Project\ihub project\iHub-Cric\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="F:\Project\ihub project\iHub-Cric\app\build\intermediates\pre-dexed\debug\classes-f28db4068b103fdd7637bfc3c4a9592e67d146fb.jar" />
+    </item>
+    <item
+        jar="F:\Project\ihub project\iHub-Cric\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="F:\Project\ihub project\iHub-Cric\app\build\intermediates\pre-dexed\debug\classes-c8d55ed9426c5c5956bf9b026f7bf5358a67894a.jar" />
+    </item>
+
+</items>
