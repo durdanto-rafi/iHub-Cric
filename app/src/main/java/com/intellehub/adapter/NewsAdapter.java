@@ -20,7 +20,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.vhNews> {
     @Override
     public vhNews onCreateViewHolder(ViewGroup parent, int viewType)
     {
-        View view = liNews.inflate(R.layout.newsRow, parent, false);
+        View view = liNews.inflate(R.layout.news_row, parent, false);
         
         return null;
     }
