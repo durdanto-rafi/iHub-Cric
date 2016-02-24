@@ -9,23 +9,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.intellehub.adapter.NewsAdapter;
+import com.intellehub.adapter.LatestNewsAdapter;
+import com.intellehub.pojo.LatestNews;
 import com.intellehub.sportshub.R;
 
-public class PrimaryFragment extends Fragment {
-    RecyclerView rvNews;
+import java.util.ArrayList;
 
+public class LatestNewsFragment extends Fragment {
+    RecyclerView rvNews;
+    ArrayList<LatestNews> latestNewsList = new ArrayList<LatestNews>();
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-
         View view = inflater.inflate(R.layout.primary_layout, null);
-
         rvNews = (RecyclerView) view.findViewById(R.id.rvNews);
-
-        NewsAdapter adapter = new NewsAdapter(getActivity());
+        LatestNewsAdapter adapter = new LatestNewsAdapter(getActivity());
         rvNews.setAdapter(adapter);
         rvNews.setHasFixedSize(true);
         rvNews.setLayoutManager(new LinearLayoutManager(getActivity()));
