@@ -4,7 +4,7 @@ package com.intellehub.extras;
  * Created by Windows on 10-02-2015.
  */
 public class UrlEndpoints {
-    public static final String URL_NEWS_LATEST = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json";
+    public static final String URL_NEWS_LATEST = "http://52.36.66.64/api/latest";
     public static final String URL_NEWS_POPULAR = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json";
     public static final String URL_CHAR_QUESTION = "?";
     public static final String URL_CHAR_AMEPERSAND = "&";
