@@ -6,6 +6,12 @@ package com.intellehub.extras;
 public interface Keys {
     public interface EndpointNews
     {
-        public static final String KEY_LATEST_NEWS="latestNews";
+        public static final String KEY_DATA="data";
+        public static final String KEY_ID="id";
+        public static final String KEY_TITLE="title";
+        public static final String KEY_IMAGE="image";
+        public static final String KEY_ABSTRACT="abstract";
+        public static final String KEY_AUTHOR="author";
+        public static final String KEY_CATEGORY="category";
     }
 }

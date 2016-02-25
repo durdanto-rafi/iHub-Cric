@@ -16,7 +16,7 @@ import java.util.ArrayList;
  */
 public class LatestNewsUtils {
     public static ArrayList<LatestNews> loadBoxOfficeMovies(RequestQueue requestQueue) {
-        JSONObject response = Requestor.requestMoviesJSON(requestQueue, Endpoints.getRequestUrlBoxOfficeMovies(30));
+        JSONObject response = Requestor.requestMoviesJSON(requestQueue, Endpoints.getRequestUrlLatestNews(30));
         ArrayList<LatestNews> listMovies = Parser.parseLatestNewsJson(response);
         //MyApplication.getWritableDatabase().insertMovies(DBMovies.BOX_OFFICE, listMovies, true);
         return listMovies;

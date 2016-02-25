@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.volley.toolbox.ImageLoader;
+import com.intellehub.network.VolleySingleton;
 import com.intellehub.pojo.LatestNews;
 import com.intellehub.sportshub.R;
 
@@ -17,10 +19,20 @@ import java.util.ArrayList;
 public class LatestNewsAdapter extends RecyclerView.Adapter<LatestNewsAdapter.VhLatestNews> {
 
     private LayoutInflater liLatestNews;
-    private ArrayList<LatestNews> latestNewsList = new ArrayList<LatestNews>();
+    private ArrayList<LatestNews> latestNewslist = new ArrayList<LatestNews>();
+    private VolleySingleton mVolleySingleton;
+    private ImageLoader mImageLoader;
 
     public LatestNewsAdapter(Context context) {
         liLatestNews = LayoutInflater.from(context);
+        mVolleySingleton = VolleySingleton.getInstance();
+        mImageLoader = mVolleySingleton.getImageLoader();
+    }
+
+    public void setLatestNews(ArrayList<LatestNews> listLatestlist) {
+        this.latestNewslist = listLatestlist;
+        //update the adapter to reflect the new set of movies
+        notifyDataSetChanged();
     }
 
     @Override
