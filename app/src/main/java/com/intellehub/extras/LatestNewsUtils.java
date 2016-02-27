@@ -15,11 +15,11 @@ import java.util.ArrayList;
  * Created by Windows on 02-03-2015.
  */
 public class LatestNewsUtils {
-    public static ArrayList<LatestNews> loadBoxOfficeMovies(RequestQueue requestQueue) {
+    public static ArrayList<LatestNews> loadLatestNews(RequestQueue requestQueue) {
         JSONObject response = Requestor.requestMoviesJSON(requestQueue, Endpoints.getRequestUrlLatestNews(30));
-        ArrayList<LatestNews> listMovies = Parser.parseLatestNewsJson(response);
+        ArrayList<LatestNews> latestNewsList = Parser.parseLatestNewsJson(response);
         //MyApplication.getWritableDatabase().insertMovies(DBMovies.BOX_OFFICE, listMovies, true);
-        return listMovies;
+        return latestNewsList;
     }
 
 }

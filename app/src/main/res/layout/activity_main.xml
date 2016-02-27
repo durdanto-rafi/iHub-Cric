@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_weight=".8"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:title="Bangladesh Cricket Board" />
+            app:title="Sports Hub" />
 
         <ImageView
             android:id="@+id/imageView"

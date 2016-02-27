@@ -1,6 +1,5 @@
 package com.intellehub.task;
 
-import android.graphics.Movie;
 import android.os.AsyncTask;
 
 import com.android.volley.RequestQueue;
@@ -32,7 +31,7 @@ public class TaskLoadLatestNews extends AsyncTask<Void, Void, ArrayList<LatestNe
     @Override
     protected ArrayList<LatestNews> doInBackground(Void... params) {
 
-        ArrayList<LatestNews> listLatestNews = LatestNewsUtils.loadBoxOfficeMovies(requestQueue);
+        ArrayList<LatestNews> listLatestNews = LatestNewsUtils.loadLatestNews(requestQueue);
         return listLatestNews;
     }
 

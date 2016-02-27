@@ -20,25 +20,26 @@ import java.util.ArrayList;
 public class LatestNewsFragment extends Fragment implements LatestNewsLoadedListener{
     RecyclerView rvNews;
     ArrayList<LatestNews> latestNewsList = new ArrayList<LatestNews>();
+    LatestNewsAdapter latestNewsAdapter;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.primary_layout, null);
         rvNews = (RecyclerView) view.findViewById(R.id.rvNews);
+        latestNewsAdapter = new LatestNewsAdapter(getActivity());
+        //latestNewsAdapter.setLatestNews(latestNewsList);
 
-        new TaskLoadLatestNews(this).execute();
-
-        LatestNewsAdapter adapter = new LatestNewsAdapter(getActivity());
-        rvNews.setAdapter(adapter);
+        rvNews.setAdapter(latestNewsAdapter);
         rvNews.setHasFixedSize(true);
         rvNews.setLayoutManager(new LinearLayoutManager(getActivity()));
 
+        new TaskLoadLatestNews(this).execute();
         return view;
     }
 
     @Override
     public void onLatestNewsLoaded(ArrayList<LatestNews> listLatestNews) {
-
+        latestNewsAdapter.setLatestNews(listLatestNews);
     }
 }

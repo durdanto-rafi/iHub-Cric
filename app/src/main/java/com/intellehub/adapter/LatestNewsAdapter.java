@@ -8,7 +8,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
+import com.intellehub.extras.Constants;
+import com.intellehub.extras.MyApplication;
+import com.intellehub.logging.L;
 import com.intellehub.network.VolleySingleton;
 import com.intellehub.pojo.LatestNews;
 import com.intellehub.sportshub.R;
@@ -33,6 +37,7 @@ public class LatestNewsAdapter extends RecyclerView.Adapter<LatestNewsAdapter.Vh
         this.latestNewslist = listLatestlist;
         //update the adapter to reflect the new set of movies
         notifyDataSetChanged();
+        L.t(MyApplication.getAppContext(), String.valueOf(listLatestlist.size()));
     }
 
     @Override
@@ -44,12 +49,32 @@ public class LatestNewsAdapter extends RecyclerView.Adapter<LatestNewsAdapter.Vh
 
     @Override
     public void onBindViewHolder(VhLatestNews holder, int position) {
+        LatestNews latestNews = latestNewslist.get(position);
+        //one or more fields of the Movie object may be null since they are fetched from the web
+        holder.tvTitle.setText(latestNews.get_title());
+        holder.tvDescription.setText(latestNews.get_abstract());
+        loadImages(latestNews.get_image(), holder);
+    }
 
+    private void loadImages(String urlThumbnail, final VhLatestNews holder) {
+        if (!urlThumbnail.equals(Constants.NA)) {
+            mImageLoader.get(urlThumbnail, new ImageLoader.ImageListener() {
+                @Override
+                public void onResponse(ImageLoader.ImageContainer response, boolean isImmediate) {
+                    holder.ivImage.setImageBitmap(response.getBitmap());
+                }
+
+                @Override
+                public void onErrorResponse(VolleyError error) {
+
+                }
+            });
+        }
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return latestNewslist.size();
     }
 
     static class VhLatestNews extends RecyclerView.ViewHolder {
