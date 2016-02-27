@@ -35,6 +35,7 @@ public class LatestNewsFragment extends Fragment implements LatestNewsLoadedList
         rvNews.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         new TaskLoadLatestNews(this).execute();
+
         return view;
     }
 
