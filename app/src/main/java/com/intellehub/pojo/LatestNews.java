@@ -14,6 +14,8 @@ public class LatestNews implements Parcelable {
     String _abstract;
     String _author;
     String _category;
+    String _full_image;
+    String _full_story;
 
 
     public int get_id() {
@@ -64,6 +66,24 @@ public class LatestNews implements Parcelable {
         this._category = _category;
     }
 
+    public String get_full_image() {
+        return _full_image;
+    }
+
+    public void set_full_image(String _full_image) {
+        this._full_image = _full_image;
+    }
+
+    public String get_full_story() {
+        return _full_story;
+    }
+
+    public void set_full_story(String _full_story) {
+        this._full_story = _full_story;
+    }
+
+    public LatestNews() {
+    }
 
     @Override
     public int describeContents() {
@@ -78,9 +98,8 @@ public class LatestNews implements Parcelable {
         dest.writeString(this._abstract);
         dest.writeString(this._author);
         dest.writeString(this._category);
-    }
-
-    public LatestNews() {
+        dest.writeString(this._full_image);
+        dest.writeString(this._full_story);
     }
 
     protected LatestNews(Parcel in) {
@@ -90,9 +109,11 @@ public class LatestNews implements Parcelable {
         this._abstract = in.readString();
         this._author = in.readString();
         this._category = in.readString();
+        this._full_image = in.readString();
+        this._full_story = in.readString();
     }
 
-    public static final Parcelable.Creator<LatestNews> CREATOR = new Parcelable.Creator<LatestNews>() {
+    public static final Creator<LatestNews> CREATOR = new Creator<LatestNews>() {
         public LatestNews createFromParcel(Parcel source) {
             return new LatestNews(source);
         }

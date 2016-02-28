@@ -17,7 +17,7 @@ public class FullArticleActivity extends AppCompatActivity {
 
     LatestNews latestNews;
     TextView tvArticle;
-    ImageView ivArticImageView;
+    ImageView ivArticIemageView;
     private VolleySingleton mVolleySingleton;
     private ImageLoader mImageLoader;
 
@@ -28,14 +28,14 @@ public class FullArticleActivity extends AppCompatActivity {
         mVolleySingleton = VolleySingleton.getInstance();
         mImageLoader = mVolleySingleton.getImageLoader();
         tvArticle = (TextView)findViewById(R.id.tvArticle);
-        ivArticImageView = (ImageView) findViewById(R.id.ivArticleImage);
+        ivArticIemageView = (ImageView) findViewById(R.id.ivArticleImage);
 
 
         Intent i = getIntent();
         latestNews = i.getParcelableExtra("currentNews");
         //L.t(MyApplication.getAppContext(), latestNews.get_image());
         tvArticle.setText(latestNews.get_abstract());
-        loadImages(latestNews.get_image(),ivArticImageView);
+        loadImages(latestNews.get_full_image(), ivArticIemageView);
     }
 
     private void loadImages(String urlThumbnail, final ImageView iv) {

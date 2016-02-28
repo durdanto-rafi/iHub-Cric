@@ -25,7 +25,7 @@ public class LatestNewsFragment extends Fragment implements LatestNewsLoadedList
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.primary_layout, null);
+        View view = inflater.inflate(R.layout.fragment_latest_news_layout, null);
         rvNews = (RecyclerView) view.findViewById(R.id.rvNews);
         latestNewsAdapter = new LatestNewsAdapter(getActivity());
         //latestNewsAdapter.setLatestNews(latestNewsList);

@@ -13,5 +13,7 @@ public interface Keys {
         public static final String KEY_ABSTRACT="abstract";
         public static final String KEY_AUTHOR="author";
         public static final String KEY_CATEGORY="category";
+        public static final String KEY_FULL_IMAGE="full_image";
+        public static final String KEY_FULL_STORY="full_story";
     }
 }

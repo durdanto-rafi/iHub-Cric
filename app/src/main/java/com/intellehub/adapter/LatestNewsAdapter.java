@@ -84,6 +84,7 @@ public class LatestNewsAdapter extends RecyclerView.Adapter<LatestNewsAdapter.Vh
         TextView tvTitle, tvDescription;
         ImageView ivImage;
         private LatestNews latestNews;
+
         public VhLatestNews(View itemView) {
             super(itemView);
 
@@ -94,8 +95,7 @@ public class LatestNewsAdapter extends RecyclerView.Adapter<LatestNewsAdapter.Vh
             itemView.setOnClickListener(this);
         }
 
-        public void setItem(LatestNews latestNews)
-        {
+        public void setItem(LatestNews latestNews) {
             this.latestNews = latestNews;
         }
 

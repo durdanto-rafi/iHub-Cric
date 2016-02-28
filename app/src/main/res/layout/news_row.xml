@@ -6,7 +6,7 @@
     android:layout_marginBottom="16dp"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
-    android:background="#C5CAE9"
+    android:background="@color/grey"
     android:foreground="?attr/selectableItemBackground"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
@@ -35,9 +35,9 @@
             android:layout_toRightOf="@+id/ivNewsImage"
             android:text="Android "
             android:textAppearance="?attr/textAppearanceListItem"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvDescription"
@@ -50,7 +50,7 @@
             android:singleLine="true"
             android:text="Place to dive into android programming"
             android:textAppearance="?attr/textAppearanceListItem"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="14sp" />
 
     </RelativeLayout>
